@@ -33,21 +33,8 @@ var CommitTypeRegex = func() string {
 	return fmt.Sprintf(`(?P<%s>(%s))`, CommitTitleTypeKey, strings.Join(commitKeys, "|"))
 }()
 
-// CommitTitleModuleKey key to determine module in regex group
-const CommitTitleModuleKey = "module"
-
-// CommitModuleRegex regex to determine commit module
-var CommitModuleRegex = func() string {
-	var commitKeys []string
-	for key := range CommitTypes {
-		commitKeys = append(commitKeys, key)
-	}
-	return fmt.Sprintf(`(\((?P<%s>(.+))\))`, CommitTitleModuleKey)
-}()
-
 const (
 	preceedingRegex  = "^"
-	moduleRegex      = "(\\((.+)\\))"
 	descriptionRegex = "(.+)"
 	separatorRegex   = ":"
 	endingRegex      = "$"
@@ -70,10 +57,11 @@ func generateRegexCheck() string {
 	commitTypeRegex := generateTypeRegex()
 
 	regex += preceedingRegex
+
 	regex += commitTypeRegex
-	regex += moduleRegex
 	regex += separatorRegex
 	regex += descriptionRegex
+
 	regex += endingRegex
 	return regex
 }
@@ -90,6 +78,8 @@ func commitMessageRegexCheck(commitMsg string) (bool, error) {
 	return correctFormat, nil
 }
 
+// Simple program to determine wether commit message is following current template
+// Template: <action>: <description>
 func main() {
 	// Get first args from the hooks - commit message
 	commitMsgFileName := os.Args[1]

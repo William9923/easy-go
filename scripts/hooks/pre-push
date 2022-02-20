@@ -24,7 +24,8 @@ echo "executing pre push checking with args [$@]"
 ######################
 # Checking unit test #
 ######################
-echo "checking test..."
+echo "checking unit test test..."
+go test ./... | grep FAIL && exit 1 || echo "all tests passed"
 
 
 
