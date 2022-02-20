@@ -31,12 +31,4 @@ git clone git@github.com:William9923/hook-the-git.git
 ```bash
 sh ./setup.sh
 ```
-3. (Optional) Run the project
-```bash
-sh ./run-hookthegit.sh
-```
-4. (Optional) Run the test
-```bash
-sh ./runtest.sh
-```
 
