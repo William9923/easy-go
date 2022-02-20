@@ -1,4 +1,4 @@
-# Hook The Developer
+# Wordle The Developer
 <p align="center">
   <img src="docs/img/gopher-hooks.jpeg" />
 </p>
@@ -7,6 +7,9 @@
 To increase the productivity of a developer, I would like to simplify the init process when trying to develop an application. 
 
 One way to do that are by using template (boilerplate). This template provides many **git hooks**. Git hooks are scripts that Git executes before or after events such as: commit, push, and receive. Git hooks are a built-in feature - no need to download anything. Git hooks are run locally.
+
+## What?
+To make it easier to use, I give a concrete example of application that use the capabilities of command line interface, http and cron (scheduler)... to play a simple wordle game. This game simply replicates the current trending wordle game, but would be useful for future me when trying to build new application...
 
 ## Hooks Overview
 In this repo, there are 4 hooks that I implemented for Golang (could be used for other programming languange too):
