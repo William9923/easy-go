@@ -1,4 +1,4 @@
-# Wordle The Developer
+# Easy Go
 <p align="center">
   <img src="docs/img/gopher-hooks.jpeg" />
 </p>
@@ -25,7 +25,7 @@ In this repo, there are 4 hooks that I implemented for Golang (could be used for
 ## How to Run 
 1. Clone the repository
 ```bash
-git clone git@github.com:William9923/hook-the-git.git
+git clone git@github.com:William9923/easy-go.git
 ```
 2. Setup the hooks
 ```bash
