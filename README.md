@@ -1,6 +1,6 @@
 # Easy Go
 <p align="center">
-  <img src="docs/img/gopher-hooks.jpeg" />
+  <img src="https://raw.githubusercontent.com/egonelbre/gophers/master/.thumb/animation/2bit-sprite/demo.gif" />
 </p>
 
 ## Why?
